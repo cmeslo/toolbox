@@ -7,7 +7,7 @@ def create(file_name, row_len, col_len):
             row = b''
             for c in range(col_len):
                 row += b'0'
-            row += b'\r'
+            row += b'\r\n'
             f.write(row)
 
     f.close()
