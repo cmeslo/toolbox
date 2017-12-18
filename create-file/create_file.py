@@ -2,7 +2,6 @@ import sys
 
 
 def create(file_name, row_len, col_len):
-
     with open(file_name, 'wb') as f:
         for r in range(row_len):
             row = b''
