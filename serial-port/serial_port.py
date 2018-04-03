@@ -2,8 +2,7 @@ import serial
 import time
 
 if __name__ == "__main__":
-    ser = serial.Serial("COM1", 9600, timeout=3)
-
+    
     # card query
     command1 = [0x02,0x02,0x00,0x30,0x00,0x32,0x03]
     bArray1 = bytearray(command1)
@@ -13,6 +12,7 @@ if __name__ == "__main__":
                 0x18,0x10,0x03,0x08,0x17,0x56,0x05,0x04,0x46,0x75,0x03]
     bArray2 = bytearray(command2)
 
+    ser = serial.Serial("COM1", 9600, timeout=3)
     # ser.open()
     ser.write(bArray1)
     time.sleep(3)
