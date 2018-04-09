@@ -2,7 +2,7 @@ import serial
 import time
 
 if __name__ == "__main__":
-    
+
     # card query
     command1 = [0x02,0x02,0x00,0x30,0x00,0x32,0x03]
     bArray1 = bytearray(command1)
@@ -15,6 +15,9 @@ if __name__ == "__main__":
     ser = serial.Serial("COM1", 9600, timeout=3)
     # ser.open()
     ser.write(bArray1)
+    out = ser.readline()
+    print(''.join('{:02x}'.format(x) for x in out))
     time.sleep(3)
+    
     ser.write(bArray2)
     ser.close()
