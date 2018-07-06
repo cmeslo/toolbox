@@ -8,7 +8,6 @@ def main():
     for line, count in counts.most_common():
         print(count, line)
 
-    f.close()
 
 if __name__ == "__main__":
     main()
