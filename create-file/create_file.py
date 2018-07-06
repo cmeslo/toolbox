@@ -10,6 +10,7 @@ def create(file_name, row_len, col_len):
             row += b'\r\n'
             f.write(row)
 
+            
 if __name__ == "__main__":
     # create('create_test.txt', 4, 1195)
     if len(sys.argv) == 4:
