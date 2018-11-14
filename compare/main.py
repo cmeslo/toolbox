@@ -6,7 +6,7 @@ def build_list(path):
 def compare(list1, list2):
     with open('./data/same.txt', 'w') as same:
         for item in list(list2):
-            if item in list(list1):
+            if item in list1:
                 list1.remove(item)
                 list2.remove(item)
                 same.write(item + '\n')
