@@ -9,7 +9,7 @@ def compare(list1, list2):
             if item in list1:
                 list1.remove(item)
                 list2.remove(item)
-                same.write(item + '\n')
+                same.write('%s\n' % item)
 
     with open('./data/diff1.txt', 'w') as diff1, open('./data/diff2.txt', 'w') as diff2:
         diff1.write('\n'.join([item for item in list1]))
