@@ -12,8 +12,8 @@ def compare(list1, list2):
                 same.write(item + '\n')
 
     with open('./data/diff1.txt', 'w') as diff1, open('./data/diff2.txt', 'w') as diff2:
-        diff1.write('\n'.join(item for item in list1))
-        diff2.write('\n'.join(item for item in list2))
+        diff1.write('\n'.join([item for item in list1]))
+        diff2.write('\n'.join([item for item in list2]))
 
 
 def main():
